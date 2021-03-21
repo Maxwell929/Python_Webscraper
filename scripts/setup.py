@@ -1,6 +1,6 @@
 from selenium import webdriver
 
-# Seting up System
+# Setting up System
 #First you have to download the chromedriver. There are plenty of instructions in the web, so it shouldn't that hard. 
 driver = webdriver.Chrome("/home/maximilian/Downloads/chromedriver")
 website = driver.get("https://www.karriere.at/")
