@@ -4,7 +4,6 @@ from scripts.costumize_filter import filtering, sammlung
 from scripts.new_site import next_Site
 import json
 
-#This is the initial script, that executes the scraping process and saves the data into a JSON file.
 
 # Filters the actuall site and goes then to the next site
 def filtering_Sites():
