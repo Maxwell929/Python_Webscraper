@@ -6,3 +6,4 @@ def next_Site():
 	next_button.location_once_scrolled_into_view
 	next_button.click()
 	time.sleep(1)
+

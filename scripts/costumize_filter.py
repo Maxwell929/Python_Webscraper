@@ -1,9 +1,14 @@
 from scripts.setup import driver, find_Elements, sammlung
 
+
+
+
 def filtering():
 
 	#refresh cause selenium gives this answer:  stale element reference: element is not attached to the page document
 	driver.refresh()
+
+
 
 	job = find_Elements('//a[@class="m-jobsListItem__titleLink"]')
 	company = find_Elements("//a[@class='m-jobsListItem__companyName m-jobsListItem__companyName--link']")
