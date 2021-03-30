@@ -29,7 +29,7 @@ filtering_Sites()
 
 # Save all the filtered jobs into a JSON file
 with open('JSON/Liste_Stellen.json', 'w') as fp:
-	json.dump(sammlung, fp, indent=4, )
+	json.dump(sammlung, fp, indent=4, ensure_ascii=False )
 
 # closing process
 driver.quit()
