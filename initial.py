@@ -16,14 +16,14 @@ def init():
 	initialization()
 	filtering_Sites()
 
-
 # Starts the scrapper
 init()
 
 # Filter the next Page(s)
 # Page 2
-#filtering_Sites()
+filtering_Sites()
 # Page 3
+filtering_Sites()
 
 
 

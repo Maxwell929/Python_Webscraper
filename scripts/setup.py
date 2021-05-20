@@ -2,7 +2,11 @@ from selenium import webdriver
 from pymongo import MongoClient
 
 # setting up the mongo db client
-cluster = MongoClient('mongodb+srv://Max:15132523@cluster1.qfm6f.mongodb.net/Scraper?retryWrites=true&w=majority')
+
+username = 'Max'
+password = 'bs3zPA24aqKnGydh'
+database = 'Scraper'
+cluster = MongoClient(f'mongodb+srv://{username}:{password}@cluster0.qfm6f.mongodb.net/{database}?retryWrites=true&w=majority')
 
 
 db = cluster['Scraper']

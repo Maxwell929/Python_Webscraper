@@ -2,6 +2,7 @@ from scripts.setup import driver, find_Elements, collection
 
 id = 0
 
+collection.delete_many({})
 
 def filtering():
     # refresh cause selenium gives this answer:  stale element reference: element is not attached to the page document
@@ -26,5 +27,5 @@ def filtering():
             "Beschreibung": de.text,
             "Link": li.get_attribute("href")
         }
-        print(id)
+
         collection.insert(data)
