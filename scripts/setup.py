@@ -1,11 +1,18 @@
 from selenium import webdriver
+from pymongo import MongoClient
 
-# Seting up System
+# setting up the mongo db client
+cluster = MongoClient('mongodb+srv://Max:15132523@cluster1.qfm6f.mongodb.net/Scraper?retryWrites=true&w=majority')
+
+
+db = cluster['Scraper']
+collection = db['scraper_data']
+
+
+
+# Setting up System
 driver = webdriver.Chrome("/home/maximilian/Downloads/chromedriver")
 website = driver.get("https://www.karriere.at/")
 
 find_Element = driver.find_element_by_xpath
 find_Elements = driver.find_elements_by_xpath
-
-# List where all the dictionaries are going to be saved
-sammlung = []

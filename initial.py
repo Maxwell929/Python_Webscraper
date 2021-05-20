@@ -1,11 +1,11 @@
 from scripts.setup import driver
 from scripts.search_costumization import initialization
-from scripts.costumize_filter import filtering, sammlung
+from scripts.costumize_filter import filtering
 from scripts.new_site import next_Site
 import json
 
 
-# Filters the actuall site and goes then to the next site
+# Filters the actual site and goes then to the next site
 def filtering_Sites():
 	filtering()
 	next_Site()
@@ -22,14 +22,14 @@ init()
 
 # Filter the next Page(s)
 # Page 2
-filtering_Sites()
+#filtering_Sites()
 # Page 3
-filtering_Sites()
+
 
 
 # Save all the filtered jobs into a JSON file
-with open('JSON/Liste_Stellen.json', 'w') as fp:
-	json.dump(sammlung, fp, indent=4, ensure_ascii=False )
+#with open('JSON/Liste_Stellen.json', 'w') as fp:
+#	json.dump(sammlung, fp, indent=4, ensure_ascii=False )
 
 # closing process
 driver.quit()

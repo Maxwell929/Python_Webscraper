@@ -11,7 +11,7 @@ prs = EC.presence_of_element_located
 
 
 # Function where I select the Element for my search
-# time.sleep is for the loading time, cause somtimes the site is loading and selenium isn't able to find the elements'
+# time.sleep is for the loading time, cause sometimes the site is loading and selenium isn't able to find the elements'
 def initialization():
 	# Input Beruf and area
 	input_beruf = find_Element('//input[@placeholder="Beruf, Begriff"]')
