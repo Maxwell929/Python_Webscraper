@@ -4,15 +4,13 @@ from pymongo import MongoClient
 # setting up the mongo db client
 
 username = 'Max'
-password = 'bs3zPA24aqKnGydh'
+password = ''
 database = 'Scraper'
-cluster = MongoClient(f'mongodb+srv://{username}:{password}@cluster0.qfm6f.mongodb.net/{database}?retryWrites=true&w=majority')
-
+cluster = MongoClient(
+    f'mongodb+srv://{username}:{password}@cluster0.qfm6f.mongodb.net/{database}?retryWrites=true&w=majority')
 
 db = cluster['Scraper']
 collection = db['scraper_data']
-
-
 
 # Setting up System
 driver = webdriver.Chrome("/home/maximilian/Downloads/chromedriver")
