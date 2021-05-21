@@ -1,4 +1,3 @@
-
 from scripts.setup import find_Element, driver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,18 +7,24 @@ timeout = 10
 w = WebDriverWait(driver, timeout)
 prs = EC.presence_of_element_located
 
+location = input("Location to search?")
+keyword = input("Job you are looking for?")
 
+if len(keyword) and len(location) < 1:
+	keyword = "IT"
+	location = "Wien"
 
 
 # Function where I select the Element for my search
 # time.sleep is for the loading time, cause sometimes the site is loading and selenium isn't able to find the elements'
+
 def initialization():
 	# Input Beruf and area
 	input_beruf = find_Element('//input[@placeholder="Beruf, Begriff"]')
-	input_beruf.send_keys("IT")
+	input_beruf.send_keys(keyword)
 
 	input_area = find_Element('//input[@name="locations"]')
-	input_area.send_keys("Wien")
+	input_area.send_keys(location)
 
 	# Close cookie window
 	cookie = find_Element('//button[@class="k-blockingCookieModal__button k-blockingCookieModal__button--karriere"]')
